@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S _masn=Intel $CFILE
+gcc -S $CFILE > ${CFILE::-2}”.s”
