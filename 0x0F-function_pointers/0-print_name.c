@@ -1,8 +1,8 @@
 #include "function_pointers.h"
 #include <stdio.h>
 /**
-* print_name - print name using 
-* @name: string to add and print 
+* print_name - print name using
+* @name: string to add and print
 * @f: pointer to function
 * Return: (nothing)
 */
