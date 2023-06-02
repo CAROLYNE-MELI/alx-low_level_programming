@@ -4,8 +4,8 @@
 #include "lists.h"
 /**
  * *add_node_end - adds a new node at end of list_t list
- * @**head: douple pointer to list_t list
- * @*str: string to be added at end
+ * @head: douple pointer to list_t list
+ * @str: string to be added at end
  * Return: the address of the new element, or NULL if it failed
  */
 list_t *add_node_end(list_t **head, const char *str)
@@ -23,7 +23,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (end == NULL)
 		return (NULL);
 	end->str = strdup(str);
-	end->len= len;
+	end->len = len;
 	end->next = NULL;
 	if (end->str == NULL)
 	{
