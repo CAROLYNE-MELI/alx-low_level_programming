@@ -1,9 +1,11 @@
 global main
 extern printf
 
-_main:
-push message
-call printf
+main:
 mov adi, format
+xor eax, eax
+call printf
+mov eax, 0
+ret
 format: db'hello, Holberton\n',0
 
