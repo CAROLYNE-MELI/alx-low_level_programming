@@ -6,8 +6,8 @@
  * delete_nodeint_at_index - deletes the node at index index of a listint_t
  * @head: pointer to listint_t list
  * @index: index of the node that should be deleted
- *  Index starts at 0
- *  Returns: 1 if it succeeded, -1 if it failed
+ * Index starts at 0
+ * Return: 1 if it succeeded, -1 if it failed
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
@@ -25,7 +25,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	for (i = 0; i < index - 1 && pre != NULL; i++)
 	{
-		if(!(pre->next && index != 0))
+		if (!(pre->next && index != 0))
 			return (-1);
 		pre = pre->next;
 	}
