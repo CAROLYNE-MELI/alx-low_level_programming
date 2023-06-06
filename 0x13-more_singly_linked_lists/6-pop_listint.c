@@ -7,7 +7,7 @@
  * Return:  head node’s data (n).
  * @head: douple pointer to head node of listint_t to be del
  */
- int pop_listint(listint_t **head)
+int pop_listint(listint_t **head)
 {
 	listint_t *temp;
 	int x;
