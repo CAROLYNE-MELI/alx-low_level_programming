@@ -12,14 +12,14 @@ void free_loop(int **head)
 {
 	int *t;
 	int *c;
-	
+
 	c = *head;
 	if (head != NULL)
 	{
 		while ((t = c) != NULL)
 		{
 			c = c->next;
-			free (t);
+			free(t);
 		}
 		*head = NULL;
 	}
@@ -46,7 +46,7 @@ size_t print_listint_safe(const listint_t *head)
 		h = new;
 
 		add = h;
-		
+
 		while (add->next != NULL)
 		{
 			add = add->next;

@@ -15,10 +15,10 @@ listint_t *find_listint_loop(listint_t *head)
 
 	if (head == NULL)
 		return (NULL);
-	
+
 	while (s && addr && addr->next)
 	{
-		addr =addr->next->next;
+		addr = addr->next->next;
 		s = s->next;
 		if (addr == s)
 		{
