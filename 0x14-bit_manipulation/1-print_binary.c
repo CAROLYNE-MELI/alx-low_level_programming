@@ -21,6 +21,6 @@ void print_binary(unsigned long int n)
 		else if (binary)
 			_putchar('0');
 	}
-	if (binary = NULL)
+	if (binary == NULL)
 		_putchar('0');
 }
