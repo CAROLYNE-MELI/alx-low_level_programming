@@ -44,6 +44,11 @@ int main(int argc, char *argv[])
 	free(buffer);
 	close(file_from);
 	close(file_to);
+	if (close(file_from) == -1 || close(file_from) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d%d\n", file_from, file_to);
+		exit(100);
+	}
 	return (0);
 }
 /**
@@ -57,12 +62,12 @@ void error_file(int file_to, int file_from, char *argv[])
 {
 	if (file_from ==  -1)
 	{
-		dprintf(STDERR_FILENO,"Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	if (file_to == -1)
 	{
-		dprintf(STDERR_FILENO,"Error: Can't write from file %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2]);
 		exit(99);
 	}
 }
