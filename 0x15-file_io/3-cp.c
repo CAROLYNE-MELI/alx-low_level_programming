@@ -5,11 +5,7 @@
  * main - Copies the contents of a file to another file.
  * @argc: The number of arguments supplied to the program.
  * @argv: An array of pointers to the arguments
- * Return: 0 on success
- * Description: If the argument count is incorrect - exit code 97.
- * If file_from does not exist or cannot be read - exit code 98.
- * If file_to cannot be created or written to - exit code 99.
- * If file_to or file_from cannot be closed - exit code 100.
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
@@ -21,7 +17,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	buffer = malloc(sizeof(char) *1024);
+	buffer = malloc(sizeof(char) * 1024);
 	if (buffer == NULL)
 		return (0);
 	file_from = open(argv[1], O_RDONLY);
@@ -67,6 +63,6 @@ void error_file(int file_to, int file_from, char *argv[])
 	if (file_to == -1)
 	{
 		dprintf(STDERR_FILENO,"Error: Can't write from file %s\n", argv[2]);
-		exit (99);
+		exit(99);
 	}
 }
