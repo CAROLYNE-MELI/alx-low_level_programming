@@ -122,7 +122,7 @@ void print_version(unsigned char *e_ident)
 }
 /**
  * print_osabi - prints OS/ABI of an ELF header
- * @e_ident: pointer to an array with 	OS/ABI of elf header
+ * @e_ident: pointer to an array with OS/ABI of elf.h
  * Return: void
  */
 void print_osabi(unsigned char *e_ident)
@@ -250,7 +250,9 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *header;
 	int _open, _read;
+
 	_open = open(argv[1], O_RDONLY);
+
 	if (_open == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
