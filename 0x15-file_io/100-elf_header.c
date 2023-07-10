@@ -140,7 +140,7 @@ void print_osabi(unsigned char *e_ident)
 			printf("UNIX - NetBSD\n");
 			break;
 		case ELFOSABI_LINUX:
-                        printf("UNIX - Linux\n");
+			printf("UNIX - Linux\n");
 			break;
 		case ELFOSABI_SOLARIS:
 			printf("UNIX - Solaris\n");
@@ -250,6 +250,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *header;
 	int _open, _read;
+
 	_open = open(argv[1], O_RDONLY);
 	if (_open == -1)
 	{
